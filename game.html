@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Some Story Game</Title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <script defer src="./story.js"></script>
+    </head>
+    <body>
+        <h3 id="titleText">Start the story...</h3>
+        <div id="intro">
+            <span id="lastLineWritten"></span> </br>
+            <span id="introText">No pressure!</span>
+        </div>
+
+        <div id="textLines">
+            <input type="text" maxlength="100" id="firstLine" onkeyup="lineOneCharCount(this.value)" /><span id="lineOneCount">100</span>
+            <br/>
+            <input type="text" maxlength="100" id="secondLine" onkeyup="lineTwoCharCount(this.value)" /><span id="lineTwoCount">100</span>
+            <br/>
+            <input type="text" maxlength="100" id="thirdLine" onkeyup="lineThreeCharCount(this.value)" /><span id="lineThreeCount">100</span>
+            <br/>
+            <button type="button" id="submitButton" onclick="getNewLines()">I'm ready</button>
+        </div>
+
+        <div id="storyContainer">
+            <p id="storySoFar">
+
+            </p>
+        </div>
+
+        <div id="howThisWorks">
+            <div id="instructions">We're writing a short story together.<br>
+            Add 3 lines to the story, following on from the last line written.<br>
+            Whoever comes next will only see the last line you wrote.<br>
+            Once 36 lines are written, the story is complete!
+            </div>
+            <div id="twitterStuff">The full story will be published by <a href="">TBA TWITTER HANDLE</a> <br>
+            Look out for story number <span id="storyNumber">###</span>.
+            </div>
+            <div id="usersTwitter">If you'd like to be mentioned in the tweet, add your twitter tag here: <br>
+            <input type="text" id="twitterHandle" placeholder="@twitter"/><button>Submit</button></div>
+        </div>
+
+        
+    </body>
+</html>
